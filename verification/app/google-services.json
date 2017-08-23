@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "608056870253",
+    "firebase_url": "https://verification-f1d63.firebaseio.com",
+    "project_id": "verification-f1d63",
+    "storage_bucket": "verification-f1d63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608056870253:android:eaad2714f5f41173",
+        "android_client_info": {
+          "package_name": "com.example.wennlab.verification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608056870253-2fhc0kvk9cqcqu9beei1uh0qh6372i7i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wennlab.verification",
+            "certificate_hash": "f088304e317a835da316f5dd60ac093235664160"
+          }
+        },
+        {
+          "client_id": "608056870253-ghfak87anbuaov2d5c7quusd3ihep3v8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW4AzvJ4yP5be2n-d4IvOLIJa-ntFjiB4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608056870253-ghfak87anbuaov2d5c7quusd3ihep3v8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
