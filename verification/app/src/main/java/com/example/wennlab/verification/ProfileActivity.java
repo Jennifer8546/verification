@@ -72,9 +72,9 @@ public class ProfileActivity extends AppCompatActivity {
                 user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(ProfileActivity.this, "已傳送Email驗證", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProfileActivity.this, "驗證信已寄出" , Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(ProfileActivity.this, "無法傳送Email驗證" + task.getException().toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProfileActivity.this, "無法傳送驗證信" + task.getException().toString(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

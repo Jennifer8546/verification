@@ -30,8 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/textView"
-            android:textColor="@color/common_google_signin_btn_text_dark_focused"
-            android:textStyle="normal|bold" />
+            android:textColor="@color/common_google_signin_btn_text_dark_focused" />
 
         <EditText
             android:layout_width="match_parent"
@@ -52,11 +51,11 @@
 
 
         <TextView
-            android:text="！密碼請超過８個字元！"
+            android:text="！密碼至少必須包含 6 個字元！"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
-            android:textColor="?android:attr/statusBarColor" />
+            android:textColor="@color/colorPrimary" />
 
         <Button
 
@@ -73,7 +72,7 @@
             android:textSize = "20sp"
             android:text="*還沒有帳號? 由此註冊*"
             android:id="@+id/login"
-            android:textColor="@android:color/holo_red_light" />
+            android:textColor="@android:color/holo_red_dark" />
     </LinearLayout>
 
 </LinearLayout>

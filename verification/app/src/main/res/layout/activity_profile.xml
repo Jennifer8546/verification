@@ -30,15 +30,13 @@
             android:layout_gravity="center"
             android:text="Welcome"
             android:textSize="36sp"
-
-            android:textColor="?attr/actionMenuTextColor"
             android:textAllCaps="false"
             android:textStyle="normal|bold" />
 
         <Button
             android:text="驗證信箱"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/verButton"
             android:textSize="24sp" />
 
@@ -47,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
-            android:textColor="?attr/actionModeSplitBackground" />
+            android:textColor="@color/colorPrimaryDark" />
 
         <EditText
             android:layout_width="196dp"
