@@ -33,8 +33,7 @@ public class ProfileActivity extends AppCompatActivity {
     private EditText etUserName, etUserposition;
     private Button buttonSave;
     private Button buttonVerified;
-
-
+    private TextView profile_Info;
     //USER 職位
     private String UserType="學生";
     @Override
@@ -60,9 +59,18 @@ public class ProfileActivity extends AppCompatActivity {
         buttonVerified=(Button) findViewById(R.id.verButton);
         etUserName = (EditText) findViewById(R.id.etUserName);
         buttonSave = (Button) findViewById(R.id.buttonsave);
+        profile_Info= (TextView) findViewById(R.id.profile_info);
 
+        // 未完成處 參考:https://github.com/givemepassxd999/firebase_auth_manager_user/blob/master/app/src/main/java/com/gg/givemepass/firebaseauthmanageruser/MainActivity.java
+        if (user != null) {
+            StringBuilder sb = new StringBuilder();
+            sb.append("\n");
+            sb.append("is email verified:");
+            sb.append(user.isEmailVerified());
+            sb.append("\n");
+        }
 
-        //顯示使用者信箱
+       //顯示使用者信箱
         tvUserEmail.setText("歡迎" + user.getEmail() + "加入!");
         //使用者信箱驗證
         buttonVerified.setOnClickListener(new View.OnClickListener() {
@@ -72,11 +80,13 @@ public class ProfileActivity extends AppCompatActivity {
                 user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(ProfileActivity.this, "驗證信已寄出" , Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProfileActivity.this, "驗證信已寄出", Toast.LENGTH_SHORT).show();
+
                         } else {
                             Toast.makeText(ProfileActivity.this, "無法傳送驗證信" + task.getException().toString(), Toast.LENGTH_SHORT).show();
                         }
                     }
+
                 });
             }
         });

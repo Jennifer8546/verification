@@ -41,6 +41,12 @@
             android:textSize="24sp" />
 
         <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_info" />
+
+        <TextView
             android:text="至信箱驗證後，再填寫以下資訊"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
