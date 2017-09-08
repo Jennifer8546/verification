@@ -59,20 +59,14 @@ public class ProfileActivity extends AppCompatActivity {
         buttonVerified=(Button) findViewById(R.id.verButton);
         etUserName = (EditText) findViewById(R.id.etUserName);
         buttonSave = (Button) findViewById(R.id.buttonsave);
-        profile_Info= (TextView) findViewById(R.id.profile_info);
 
         // 未完成處 參考:https://github.com/givemepassxd999/firebase_auth_manager_user/blob/master/app/src/main/java/com/gg/givemepass/firebaseauthmanageruser/MainActivity.java
-        if (user != null) {
-            StringBuilder sb = new StringBuilder();
-            sb.append("\n");
-            sb.append("is email verified:");
-            sb.append(user.isEmailVerified());
-            sb.append("\n");
-        }
+
 
        //顯示使用者信箱
         tvUserEmail.setText("歡迎" + user.getEmail() + "加入!");
         //使用者信箱驗證
+        profile_Info = (TextView) findViewById(R.id.profile_info);
         buttonVerified.setOnClickListener(new View.OnClickListener() {
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             @Override
@@ -88,6 +82,14 @@ public class ProfileActivity extends AppCompatActivity {
                     }
 
                 });
+                if (user != null) {
+                    StringBuilder sb = new StringBuilder();
+                    sb.append("\n");
+                    sb.append("is email verified:");
+                    sb.append(user.isEmailVerified());
+                    sb.append("\n");
+                    profile_Info.setText(sb.toString());
+                }
             }
         });
 
